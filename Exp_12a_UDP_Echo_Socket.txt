@@ -1,0 +1,65 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 12(a): TCP/UDP ECHO CLIENT–SERVER
+----------------------------------------------------------------------------------------------------
+AIM:
+  To implement client-server echo communication using TCP and UDP socket programming.
+
+ALGORITHM:
+  1. Server creates a socket, binds socket to local IP and designated port, and awaits requests.
+  2. TCP: Server calls listen() and accepts connection; UDP: Server waits for datagrams via recvfrom().
+  3. Client opens a socket and sends a message packet to the server.
+  4. Server reads the received message and echoes the payload back; client prints received reply.
+  5. Sockets are closed cleanly on both endpoints upon communication completion.
+
+PROGRAM IMPLEMENTATION (UDP ECHO CLIENT-SERVER):
+----------------------------------------------------------------------------------------------------
+import socket
+import time
+import sys
+
+# ------------------------
+# UDP Ping Server
+# ------------------------
+def udp_ping_server(host="127.0.0.1", port=12000):
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    server_socket.bind((host, port))
+    print(f"[SERVER] Listening on {host}:{port}")
+
+    while True:
+        msg, client_address = server_socket.recvfrom(1024)
+        print(f"[SERVER] Received '{msg.decode()}' from {client_address}")
+        # Echo back
+        server_socket.sendto(msg, client_address)
+# ------------------------
+# UDP Ping Client
+# ------------------------
+def udp_ping_client(server_host="127.0.0.1", server_port=12000, count=5):
+    client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    client_socket.settimeout(1)  # 1 second timeout
+
+    for i in range(1, count + 1):
+        msg = f"Ping {i} {time.time()}"
+        start = time.time()
+        client_socket.sendto(msg.encode(), (server_host, server_port))
+
+        try:
+            data, _ = client_socket.recvfrom(1024)
+            end = time.time()
+            rtt = (end - start) * 1000
+            print(f"Reply from {server_host}:{server_port} | {data.decode()} | RTT = {rtt:.2f} ms")
+        except socket.timeout:
+            print(f"Request {i} timed out")
+
+    client_socket.close()
+# ------------------------
+# Run as server or client
+# ------------------------
+if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "server":
+        udp_ping_server()
+    else:
+        udp_ping_client()
+----------------------------------------------------------------------------------------------------
+
+RESULT:
+  Echo client-server applications were implemented using TCP and UDP sockets.

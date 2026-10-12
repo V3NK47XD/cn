@@ -1,0 +1,17 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 11(a): STATIC ROUTING
+----------------------------------------------------------------------------------------------------
+AIM:
+  To manually configure static routing entries between routers in Cisco Packet Tracer.
+
+PROCEDURE:
+  1. Interconnect routers, switches, and host PCs; assign respective IP addresses to all interfaces.
+  2. Enable all router interfaces using the `no shutdown` command.
+  3. Add static route definitions on each router for remote subnets:
+     ip route <destination_network> <subnet_mask> <next_hop_address_or_exit_interface>
+  4. Verify the routing table using the CLI command:
+     show ip route
+  5. Ping remote workstations and verify end-to-end packet delivery path.
+
+RESULT:
+  Static routing was configured and multi-hop forwarding was validated.

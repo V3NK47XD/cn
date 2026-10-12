@@ -1,0 +1,25 @@
+----------------------------------------------------------------------------------------------------
+ADDITIONAL PRACTICE EXPERIMENTS
+----------------------------------------------------------------------------------------------------
++----+-----------------------------+---------------------------------------------------------------+
+|No|Experiment Title|Detailed Implementation Outline|
++----+-----------------------------+---------------------------------------------------------------+
+|1|Character Stuffing / BSC|Read characters from file, insert control bytes (DLE, STX,|
+||Framing|ETX), escape reserved bytes; transmit, un-stuff, decode.|
++----+-----------------------------+---------------------------------------------------------------+
+|2|NAT / PAT|Configure inside/outside interfaces on router in Packet|
+|||Tracer; verify IP address and port mapping translation tables.|
++----+-----------------------------+---------------------------------------------------------------+
+|3|Static Routing Table|Programmatically implement static routes; display routing|
+|||table entries dynamically after each update.|
++----+-----------------------------+---------------------------------------------------------------+
+|4|Dynamic Routing Table|Programmatically implement dynamic routing protocol updates;|
+|||display live route convergence and metric updates.|
++----+-----------------------------+---------------------------------------------------------------+
+|5|FTP using Sockets|Implement TCP socket client-server to establish control and|
+|||data channels for remote file transfers.|
++----+-----------------------------+---------------------------------------------------------------+
+
+====================================================================================================
+                                            END OF NOTES
+====================================================================================================

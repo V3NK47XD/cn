@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 8(b): WIRELESS LAN IN PACKET TRACER
+----------------------------------------------------------------------------------------------------
+AIM:
+  To configure a secured Wireless Local Area Network (WLAN) in Cisco Packet Tracer.
+
+PROCEDURE:
+  1. Place a wireless router and three PCs equipped with wireless network adapters.
+  2. Set the wireless router IP address to 192.168.0.1 and broadcast SSID to "MotherNetwork".
+  3. Configure wireless security settings (WPA2/PSK) and define a pre-shared security key.
+  4. Configure static network parameters for PCs:
+     - PC IP Addresses: 192.168.0.2, 192.168.0.3, and 192.168.0.4
+     - Subnet Mask: 255.255.255.0
+     - Default Gateway: 192.168.0.1
+  5. Connect each PC to the "MotherNetwork" SSID using the pre-shared network key.
+  6. Execute ping commands between PCs and router to verify wireless connectivity.
+
+RESULT:
+  A secured wireless local area network was configured and validated.

@@ -1,0 +1,32 @@
+====================================================================================================
+           CS23532 – COMPUTER NETWORKS LABORATORY: EXPERIMENTS INDEX (2026–2027)
+====================================================================================================
+
+INDEX OF FILES:
+----------------------------------------------------------------------------------------------------
+File Name                  | Description / Practical Title
+----------------------------------------------------------------------------------------------------
+Exp_01_Network_Commands.txt| Practical 1: Network Commands in Linux and Windows
+Exp_02_Network_Cables.txt  | Practical 2: Network Cables (UTP/STP/Coax/Fiber & T568A/T568B)
+Exp_03_Packet_Tracer_Hub_Switch.txt | Practical 3: Cisco Packet Tracer and Hub/Switch Comparison
+Exp_04_Wired_LAN.txt       | Practical 4: Configure a Wired LAN
+Exp_05_Wireshark_Capture.txt| Practical 5: Packet Capture Using Wireshark
+Exp_06_Hamming_Code.txt    | Practical 6: Error Detection/Correction Using Hamming Code (Python)
+Exp_07_Sliding_Window.txt  | Practical 7: Sliding Window Flow Control (Python)
+Exp_08a_Nmap_Host_Discovery.txt | Practical 8: Live-Host Discovery Using Nmap
+Exp_08b_Wireless_LAN.txt   | Practical 8(b): Wireless LAN in Packet Tracer
+Exp_09_IP_Subnetting.txt   | Practical 9: IP Subnetting in Packet Tracer
+Exp_10a_Internetworking_Routers.txt | Practical 10(a): Internetworking Using Routers
+Exp_10b_Wireless_DHCP_Cloud.txt | Practical 10(b): Wireless Router, DHCP and Internet Cloud
+Exp_10c_Physical_Internetwork.txt | Practical 10(c): Physical Internetwork in the Lab
+Exp_11a_Static_Routing.txt | Practical 11(a): Static Routing
+Exp_11b_RIP_Dynamic_Routing.txt | Practical 11(b): RIP Dynamic Routing
+Exp_12a_UDP_Echo_Socket.txt| Practical 12(a): TCP/UDP Echo Client–Server (UDP Python Code)
+Exp_12b_TCP_Chat_Socket.txt| Practical 12(b): Socket-Based Chat (Multithreaded TCP Python Code)
+Exp_13_Ping_Utility.txt    | Practical 13: Implement Your Own Ping (Cross-Platform Python Code)
+Exp_14_Raw_Sockets_Sniffer.txt | Practical 14: Packet Sniffing Using Raw Sockets
+Exp_15_Webalizer_Log_Analysis.txt | Practical 15: Web Log Analysis Using Webalizer
+Exp_16_Additional_Practice.txt | Additional Practice: Character Stuffing, NAT/PAT, Routing, FTP
+----------------------------------------------------------------------------------------------------
+TOTAL FILES: 21 (1 Index File + 20 Experiment Text Files)
+====================================================================================================

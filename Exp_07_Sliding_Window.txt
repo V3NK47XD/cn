@@ -1,0 +1,50 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 7: SLIDING WINDOW FLOW CONTROL
+----------------------------------------------------------------------------------------------------
+AIM:
+  To simulate data-link layer flow control mechanisms using the sliding window protocol.
+
+ALGORITHM:
+  1. Accept input for sender window size and payload message string.
+  2. Divide message into discrete frames, treating each character as a single frame.
+  3. Assign sequence numbers to frames and push the data into Sender_Buffer.
+  4. Transmit the permitted frame window to the receiver.
+  5. Receiver validates incoming frame numbers and returns ACK or NACK to Receiver_Buffer.
+  6. Sender parses received acknowledgement; slides window and transmits next set if ACK is valid.
+  7. If a NACK or incorrect acknowledgement is detected, retransmit the requested frame(s).
+  8. Inject deliberate transmission errors by altering a frame or ACK number to verify retransmission.
+
+PROGRAM IMPLEMENTATION (PYTHON):
+----------------------------------------------------------------------------------------------------
+n = int(input("Enter number of frames: "))
+w = int(input("Enter window size: "))
+
+data = input("Enter message: ")
+
+frames = []
+
+for i in range(len(data)):
+    frames.append([i + 1, data[i]])
+
+print("\nSender Buffer:")
+print(frames)
+
+i = 0
+
+while i < len(frames):
+    for j in range(i, min(i + w, len(frames))):
+        print("Sending Frame:", frames[j])
+
+    ack = int(input("Enter ACK number: "))
+
+    if ack > i and ack <= len(frames):
+        i = ack
+        print("ACK received. Window slides.")
+    else:
+        print("NACK received. Resending frames.")
+
+print("\nAll frames sent successfully!")
+----------------------------------------------------------------------------------------------------
+
+RESULT:
+  Sliding-window transmission, acknowledgements, and retransmission mechanisms were simulated.

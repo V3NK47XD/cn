@@ -1,0 +1,25 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 8: LIVE-HOST DISCOVERY USING NMAP
+----------------------------------------------------------------------------------------------------
+AIM:
+  To discover live hosts using ARP, ICMP, and TCP/UDP scans in the authorized TryHackMe Nmap room.
+
+NMAP DISCOVERY SCAN COMMANDS:
++-------------------+------------------------------------------------------------------------------+
+|Command|Scan Description / Probe Type|
++-------------------+------------------------------------------------------------------------------+
+|nmap -sn|Host discovery only (disables port scan)|
+|nmap -sn -PR|ARP discovery scan (used for hosts on local Ethernet network)|
+|nmap -sn -PE|ICMP Echo Request discovery scan|
+|nmap -sn -PS80,443|TCP SYN discovery probes sent to target ports 80 and 443|
+|nmap -sn -PU53|UDP discovery probe sent to target port 53|
+|nmap -n -sn|Skips DNS reverse-resolution to speed up host discovery|
++-------------------+------------------------------------------------------------------------------+
+
+PROCEDURE:
+  1. Select the designated target in the authorized lab environment.
+  2. Execute the appropriate host discovery scan commands.
+  3. Document responding hosts, noting that ARP discovery operates exclusively on local subnets.
+
+RESULT:
+  Live-host discovery methods were tested and validated in the authorized lab environment.

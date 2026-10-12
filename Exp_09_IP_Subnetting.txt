@@ -1,0 +1,22 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 9: IP SUBNETTING IN PACKET TRACER
+----------------------------------------------------------------------------------------------------
+AIM:
+  To partition an IP address block into multiple subnets and route packets across a router.
+
+PROCEDURE:
+  1. Design a network topology featuring routers, switches, and client workstations.
+  2. Subnet an allocated address block into required segments:
+     - Example: /27 CIDR allocation provides 32 addresses (30 usable host IPs) per subnet.
+  3. Assign router interfaces and PC stations unique IPs, subnet masks, and default gateways.
+  4. Configure and activate router interfaces via Cisco CLI:
+     enable
+     configure terminal
+     interface <interface_name>
+     ip address <ip_address> <subnet_mask>
+     no shutdown
+  5. Interconnect subnets through router interfaces and execute `ping` to test cross-subnet traffic.
+  6. Disable or disconnect the router link to verify that cross-subnet routing fails without it.
+
+RESULT:
+  Subnet addressing and inter-subnet routing were simulated and verified.

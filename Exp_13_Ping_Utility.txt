@@ -1,0 +1,40 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 13: IMPLEMENT YOUR OWN PING
+----------------------------------------------------------------------------------------------------
+AIM:
+  To design and implement a custom ping utility to test network reachability.
+
+ALGORITHM:
+  1. Accept target host name or IP address; resolve DNS if required.
+  2. Choose execution method (via raw socket implementation or system wrapper).
+  3. Send ICMP Echo Request packets and capture Echo Replies.
+  4. Calculate round-trip time (RTT) and output transmission statistics or timeout errors.
+  5. Repeat across specified iteration count; compute packet loss rate.
+
+PROGRAM IMPLEMENTATION (CROSS-PLATFORM PING UTILITY):
+----------------------------------------------------------------------------------------------------
+import os
+import platform
+import subprocess
+
+def ping(host="google.com", count=4):
+    """
+    Simple wrapper around the system ping command.
+    Works on Windows, Linux, and macOS.
+    """
+    # Choose command based on OS
+    param = "-n" if platform.system().lower() == "windows" else "-c"
+    command = ["ping", param, str(count), host]
+
+    try:
+        output = subprocess.check_output(command, universal_newlines=True)
+        print(output)
+    except Exception as e:
+        print(f"Ping failed: {e}")
+
+if __name__ == "__main__":
+    ping("8.8.8.8")  # Google DNS by default
+----------------------------------------------------------------------------------------------------
+
+RESULT:
+  A custom ping utility was implemented to evaluate reachability and latency.

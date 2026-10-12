@@ -1,0 +1,28 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 3: CISCO PACKET TRACER AND HUB/SWITCH
+----------------------------------------------------------------------------------------------------
+AIM:
+  To learn the Cisco Packet Tracer environment and compare the behavior of hubs versus switches.
+
+PROCEDURE:
+  1. Open Cisco Packet Tracer and explore the interface:
+     - Menu Bar & Main Toolbar
+     - Logical/Physical Workspace
+     - Device Selection Box & Connections Box
+     - Realtime & Simulation Mode Controls
+  2. Place four PCs and one network hub on the workspace.
+  3. Connect all four PCs to the hub using copper straight-through cables.
+  4. Assign each PC a unique IP address within the exact same subnet mask.
+  5. Replicate the topology replacing the hub with a network switch.
+  6. Send a Protocol Data Unit (PDU) between two PCs in Simulation mode and observe forwarding.
+
+COMPARISON OBSERVATIONS:
++-------------+---------------------+--------------------------------------------------------------+
+|Device|Forwarding Method|Operation & Collision Behavior|
++-------------+---------------------+--------------------------------------------------------------+
+|Hub|Broadcast (Repeats)|Repeats incoming signals to all ports; shared collision dom|
+|Switch|Unicast (Filtering)|Reads MAC table; forwards frames only to the target port|
++-------------+---------------------+--------------------------------------------------------------+
+
+RESULT:
+  Packet Tracer was used to build and simulate networks; hub and switch behavior was compared.

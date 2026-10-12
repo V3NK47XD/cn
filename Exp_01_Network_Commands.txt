@@ -1,0 +1,26 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 1: NETWORK COMMANDS IN LINUX AND WINDOWS
+----------------------------------------------------------------------------------------------------
+AIM:
+  To study common network commands used for configuration, diagnosis, and troubleshooting across
+  operating systems.
+
+COMMAND REFERENCE TABLE:
++--------------------------+----------+------------------------------------------------------------+
+|Command|OS|Detailed Purpose & Description|
++--------------------------+----------+------------------------------------------------------------+
+|ping|Both|Tests end-to-end reachability using ICMP Echo requests|
+|ipconfig /all|Windows|Displays full IP configuration, MAC, DHCP, and DNS info|
+|ip addr / ip address show|Linux|Displays all IP addresses and interface properties|
+|hostname|Both|Displays the assigned system computer name|
+|arp -a|Both|Displays the ARP table cache containing IP-to-MAC mappings|
+|netstat -an|Both|Shows active network connections and listening ports|
+|route print / ip route|Win / Lin|Prints kernel routing table entries and default gateway|
+|nslookup|Both|Queries DNS servers to resolve hostnames to IP addresses|
+|tracert / traceroute|Win / Lin|Displays every intermediate hop and route to a destination|
+|pathping / mtr|Win / Lin|Combines route tracing with packet loss and latency stats|
+|tcpdump -i|Linux|Captures and analyzes live network packets on an interface|
++--------------------------+----------+------------------------------------------------------------+
+
+RESULT:
+  Network commands were studied, executed, and used to inspect connectivity and configuration.

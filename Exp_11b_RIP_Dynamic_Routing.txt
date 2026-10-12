@@ -1,0 +1,18 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 11(b): RIP DYNAMIC ROUTING
+----------------------------------------------------------------------------------------------------
+AIM:
+  To configure dynamic routing utilizing the Routing Information Protocol (RIP) in Packet Tracer.
+
+PROCEDURE:
+  1. Build network topology with routers, serial WAN links, and local LANs; configure IP addressing.
+  2. Bring interfaces up using `no shutdown`; configure clock rate on serial DCE interfaces if needed.
+  3. Configure RIP routing on all routers:
+     router rip
+     version 2
+     network <classful_network_address>
+  4. Verify populated dynamic routes using `show ip route` and trace routes using `ping` and `tracert`.
+  5. Administratively disable an active network link and observe RIP route convergence and failover.
+
+RESULT:
+  RIP dynamic routing was configured, exchanged routes, and managed rerouting upon link failure.

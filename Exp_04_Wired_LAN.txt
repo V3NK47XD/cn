@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 4: CONFIGURE A WIRED LAN
+----------------------------------------------------------------------------------------------------
+AIM:
+  To configure a functional wired Local Area Network (LAN) using a switch and Ethernet cables.
+
+PROCEDURE:
+  1. Interconnect 3 to 4 PCs to a network switch using Ethernet straight-through cables.
+  2. Configure static, unique IP addresses for all PCs within the same logical subnet:
+     - PC1: 10.1.1.1 (Mask: 255.0.0.0)
+     - PC2: 10.1.1.2 (Mask: 255.0.0.0)
+     - PC3: 10.1.1.3 (Mask: 255.0.0.0)
+     - PC4: 10.1.1.4 (Mask: 255.0.0.0)
+  3. Execute `ping` commands across machines to verify full physical and logical connectivity.
+  4. Create and share a folder over the network with permissions granted to LAN users.
+  5. Access the shared folder from another host on the network to verify network file sharing.
+
+RESULT:
+  A wired local area network was configured, and connectivity and file sharing were verified.

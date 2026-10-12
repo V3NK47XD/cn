@@ -1,0 +1,14 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 15: WEB LOG ANALYSIS USING WEBALIZER
+----------------------------------------------------------------------------------------------------
+AIM:
+  To analyze web server access logs using the Webalizer analysis tool.
+
+PROCEDURE:
+  1. Launch Webalizer and supply the path to an active web server access log file.
+  2. Configure target output paths, directory mappings, and custom log formats if needed.
+  3. Run the Webalizer analysis engine to parse log records.
+  4. Inspect generated analytical reports: monthly traffic, visitor hosts, top URLs, referrers, and user agents.
+
+RESULT:
+  Web server access logs were parsed and graphical traffic summary reports were generated.

@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 5: PACKET CAPTURE USING WIRESHARK
+----------------------------------------------------------------------------------------------------
+AIM:
+  To capture live network traffic and study OSI protocol encapsulation using Wireshark.
+
+PROCEDURE:
+  1. Launch Wireshark and select the active network adapter interface.
+  2. Start packet capture, generate network traffic (e.g., browse, ping), stop and save capture.
+  3. Apply display filters to isolate specific network protocols:
+     - tcp, udp, arp, dns, http, ip, icmp, dhcp
+  4. Inspect captured frames across the three primary viewing panes:
+     - Packet List (top list of captured frames)
+     - Packet Details (collapsible OSI protocol layer header breakdowns)
+     - Packet Bytes (raw hexadecimal and ASCII frame dump)
+  5. Navigate to Statistics -> Flow Graph to evaluate traffic patterns and session exchange flows.
+
+RESULT:
+  Packets were captured, filtered, and inspected across multiple protocol layers.

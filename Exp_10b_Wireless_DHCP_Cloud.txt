@@ -1,0 +1,14 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 10(b): WIRELESS ROUTER, DHCP AND INTERNET CLOUD
+----------------------------------------------------------------------------------------------------
+AIM:
+  To configure an internetwork using a wireless router, DHCP, and an Internet cloud in Packet Tracer.
+
+PROCEDURE:
+  1. Place a wireless router, wireless PC stations, and an Internet cloud in Packet Tracer.
+  2. Configure router LAN/WAN interfaces and enable DHCP service with an IP address pool.
+  3. Connect PC stations wirelessly and configure them to automatically obtain an IP address via DHCP.
+  4. Inspect assigned IP configurations, default gateways, and DNS settings; test links via ping/PDUs.
+
+RESULT:
+  A wireless network utilizing DHCP and an Internet cloud was configured and tested.

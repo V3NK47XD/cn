@@ -1,0 +1,14 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 10(c): PHYSICAL INTERNETWORK IN THE LAB
+----------------------------------------------------------------------------------------------------
+AIM:
+  To connect multiple physical networks using hardware switches, a router, and Ethernet cables.
+
+PROCEDURE:
+  1. Connect lab PCs to respective switches and patch each switch into an active router interface.
+  2. Assign valid static IP addresses and subnet masks to all physical workstations and router ports.
+  3. Set default gateways on every workstation to point to the local router interface IP.
+  4. Enable router interfaces and verify full inter-network reachability using `ping`.
+
+RESULT:
+  A physical internetwork was configured in the laboratory and verified.

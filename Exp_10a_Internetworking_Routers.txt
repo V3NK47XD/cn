@@ -1,0 +1,14 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 10(a): INTERNETWORKING USING ROUTERS
+----------------------------------------------------------------------------------------------------
+AIM:
+  To interconnect two separate IP network segments using a network router.
+
+PROCEDURE:
+  1. Connect two distinct network switch segments to separate router ports via straight-through cables.
+  2. Assign valid IP configurations to each router interface and issue `no shutdown` to activate them.
+  3. Assign PC host IPs, subnet masks, and configure the router interface as default gateway.
+  4. Test local intra-subnet and remote inter-subnet connectivity via ping and PDU simulation.
+
+RESULT:
+  Two separate IP networks were interconnected and routed using a router.

@@ -1,0 +1,78 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 6: ERROR DETECTION/CORRECTION USING HAMMING CODE
+----------------------------------------------------------------------------------------------------
+AIM:
+  To implement error detection and error correction algorithms using Hamming Code.
+
+ALGORITHM / PROCEDURE:
+  1. Read input string from the sender and convert text characters into a binary bit stream.
+  2. Calculate and insert redundant parity bits at bit positions representing powers of 2 (1, 2, 4, 8, ...).
+  3. Calculate the parity values across matching data bit positions according to even or odd parity.
+  4. Transmit and save the fully encoded bit stream into a channel file.
+  5. The receiver extracts the channel file and recalculates all parity bits to produce the syndrome.
+  6. If the syndrome value is non-zero, it identifies the exact bit position containing an error.
+  7. Correct the error by flipping that specific erroneous bit (0 -> 1 or 1 -> 0).
+  8. Strip away parity bits, convert remaining data bits back to ASCII text, and display the output.
+
+PROGRAM IMPLEMENTATION (PYTHON):
+----------------------------------------------------------------------------------------------------
+def encode(data):
+    bits = ''.join(format(ord(c), '08b') for c in data)
+    result = []
+
+    for i in range(0, len(bits), 4):
+        d = bits[i:i+4].ljust(4, '0')
+        d1, d2, d3, d4 = map(int, d)
+
+        p1 = d1 ^ d2 ^ d4
+        p2 = d1 ^ d3 ^ d4
+        p4 = d2 ^ d3 ^ d4
+
+        result.extend([p1, p2, d1, p4, d2, d3, d4])
+
+    return result
+def decode(bits):
+    data = []
+
+    for i in range(0, len(bits), 7):
+        b = bits[i:i+7]
+
+        if len(b) < 7:
+            continue
+
+        p1, p2, d1, p4, d2, d3, d4 = b
+
+        s1 = p1 ^ d1 ^ d2 ^ d4
+        s2 = p2 ^ d1 ^ d3 ^ d4
+        s4 = p4 ^ d2 ^ d3 ^ d4
+
+        error = s1 + 2 * s2 + 4 * s4
+
+        if error:
+            print("Error at bit position:", error)
+            b[error - 1] ^= 1
+
+        data.extend([b[2], b[4], b[5], b[6]])
+
+    text = ''
+
+    for i in range(0, len(data), 8):
+        byte = data[i:i+8]
+        if len(byte) == 8:
+            text += chr(int(''.join(map(str, byte)), 2))
+
+    return text
+text = input("Enter text: ")
+
+bits = encode(text)
+print("Hamming Code:", ''.join(map(str, bits)))
+
+# Simulate an error
+bits[2] ^= 1
+print("Received with error:", ''.join(map(str, bits)))
+
+print("Decoded text:", decode(bits))
+----------------------------------------------------------------------------------------------------
+
+RESULT:
+  Hamming code was implemented to locate and correct a single-bit error.

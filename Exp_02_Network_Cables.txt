@@ -1,0 +1,38 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 2: NETWORK CABLES
+----------------------------------------------------------------------------------------------------
+AIM:
+  To study network cable types and construct straight-through and crossover Ethernet cables.
+
+CABLE TYPES STUDIED:
+  1. Unshielded Twisted Pair (UTP)
+  2. Shielded Twisted Pair / Screened Shielded Twisted Pair (STP / SSTP)
+  3. Coaxial Cable
+  4. Fibre-Optic Cable
+
+WIRING PINOUT STANDARDS (T568A vs T568B):
++-----+-----------------------+-----------------------+
+|Pin|T568A Color Standard|T568B Color Standard|
++-----+-----------------------+-----------------------+
+|1|White / Green|White / Orange|
+|2|Green|Orange|
+|3|White / Orange|White / Green|
+|4|Blue|Blue|
+|5|White / Blue|White / Blue|
+|6|Orange|Green|
+|7|White / Brown|White / Brown|
+|8|Brown|Brown|
++-----+-----------------------+-----------------------+
+
+STEP-BY-STEP PROCEDURE:
+  1. Strip approximately 1.5 cm of the outer cable jacket carefully without nicking wires.
+  2. Untwist the four pairs of wires and straighten them cleanly.
+  3. Arrange wires according to the selected standard (T568A or T568B) and trim evenly.
+  4. Insert wires fully into the RJ45 connector, verifying the outer jacket extends inside.
+  5. Crimp the RJ45 plug using a crimping tool; repeat the procedure on the opposite end.
+  6. Straight-Through Cable: Wire both ends using the same standard (T568A–T568A or T568B–T568B).
+  7. Crossover Cable: Wire one end with T568A and the opposing end with T568B.
+  8. Test the finished cable using an electronic cable tester or between networking devices.
+
+RESULT:
+  Network cable types were studied and Ethernet patch cables were crimped, wired, and verified.

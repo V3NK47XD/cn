@@ -1,0 +1,15 @@
+----------------------------------------------------------------------------------------------------
+PRACTICAL 14: PACKET SNIFFING USING RAW SOCKETS
+----------------------------------------------------------------------------------------------------
+AIM:
+  To capture and inspect network traffic headers using raw sockets.
+
+ALGORITHM:
+  1. Create a raw socket with necessary administrative privileges.
+  2. Bind socket to specific physical network adapter if required by the operating system.
+  3. Continuously capture frames from interface; unpack Ethernet, IP, and transport layer headers.
+  4. Extract and display header fields: Source IP, Destination IP, Protocol, and Payload Length.
+  5. Terminate packet capture loop and close the raw socket handle.
+
+RESULT:
+  Raw-socket packet capture and protocol header decoding were implemented.
