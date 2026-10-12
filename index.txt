@@ -27,6 +27,8 @@ Exp_13_Ping_Utility.txt    | Practical 13: Implement Your Own Ping (Cross-Platfo
 Exp_14_Raw_Sockets_Sniffer.txt | Practical 14: Packet Sniffing Using Raw Sockets
 Exp_15_Webalizer_Log_Analysis.txt | Practical 15: Web Log Analysis Using Webalizer
 Exp_16_Additional_Practice.txt | Additional Practice: Character Stuffing, NAT/PAT, Routing, FTP
+hamming-sender.py         | Practical 6: Hamming Code Sender / Encoder (Python)
+hamming-receiver.py       | Practical 6: Hamming Code Receiver / Error Corrector (Python)
 ----------------------------------------------------------------------------------------------------
-TOTAL FILES: 21 (1 Index File + 20 Experiment Text Files)
+TOTAL FILES: 23 (1 Index File + 20 Experiment Text Files + 2 Python Scripts)
 ====================================================================================================
